@@ -26,12 +26,24 @@ export class SharedService {
       required: true
     },
     {
+      type: "textarea",
+      name: "address",
+      label: "Address",
+      value: "",
+      required: true
+    },
+    {
       type: "dropdown",
       name: "country",
       label: "Country",
-      value: "in",
+      value: "us",
       required: true,
-      options: [{ key: "in", label: "India" }, { key: "us", label: "USA" }]
+      options: [
+        { key: "in", label: "India" },
+        { key: "us", label: "USA" },
+        { key: "mx", label: "Mexico" },
+        { key: "ts", label: "Tunisia" }
+      ]
     },
     {
       type: "radio",
@@ -43,10 +55,17 @@ export class SharedService {
     },
     {
       type: "checkbox",
-      name: "hobby",
-      label: "Hobby",
+      name: "source",
+      label: "source",
       required: true,
-      options: [{ key: "f", label: "Fishing" }, { key: "c", label: "Cooking" }]
+      options: [{ key: "f", label: "Online" }, { key: "c", label: "Web" }]
+    },
+    {
+      type: "checkbox",
+      name: "product",
+      label: "product",
+      required: true,
+      options: [{ key: "f", label: "cash" }, { key: "c", label: "ATM" }]
     }
   ];
 
@@ -79,7 +98,12 @@ export class SharedService {
       label: "Country",
       value: "in",
       required: true,
-      options: [{ key: "in", label: "India" }, { key: "us", label: "USA" }]
+      options: [
+        { key: "in", label: "India" },
+        { key: "us", label: "USA" },
+        { key: "mx", label: "Mexico" },
+        { key: "ts", label: "Tunisia" }
+      ]
     },
     {
       type: "radio",
@@ -91,10 +115,10 @@ export class SharedService {
     },
     {
       type: "checkbox",
-      name: "hobby",
-      label: "Hobby",
+      name: "source",
+      label: "source",
       required: true,
-      options: [{ key: "f", label: "Fishing" }, { key: "c", label: "Cooking" }]
+      options: [{ key: "f", label: "Online" }, { key: "c", label: "Web" }]
     }
   ];
 
@@ -126,9 +150,14 @@ export class SharedService {
       type: "dropdown",
       name: "country",
       label: "Country",
-      value: "in",
+      value: "mx",
       required: true,
-      options: [{ key: "in", label: "India" }, { key: "us", label: "USA" }]
+      options: [
+        { key: "in", label: "India" },
+        { key: "us", label: "USA" },
+        { key: "mx", label: "Mexico" },
+        { key: "ts", label: "Tunisia" }
+      ]
     },
     {
       type: "radio",
@@ -140,10 +169,10 @@ export class SharedService {
     },
     {
       type: "checkbox",
-      name: "hobby",
-      label: "Hobby",
+      name: "source",
+      label: "source",
       required: true,
-      options: [{ key: "f", label: "Fishing" }, { key: "c", label: "Cooking" }]
+      options: [{ key: "f", label: "Online" }, { key: "c", label: "Web" }]
     }
   ];
   tunisia_controls: any[] = [
@@ -174,9 +203,14 @@ export class SharedService {
       type: "dropdown",
       name: "country",
       label: "Country",
-      value: "in",
+      value: "ts",
       required: true,
-      options: [{ key: "in", label: "India" }, { key: "us", label: "USA" }]
+      options: [
+        { key: "in", label: "India" },
+        { key: "us", label: "USA" },
+        { key: "mx", label: "Mexico" },
+        { key: "ts", label: "Tunisia" }
+      ]
     },
     {
       type: "radio",
@@ -188,10 +222,10 @@ export class SharedService {
     },
     {
       type: "checkbox",
-      name: "hobby",
-      label: "Hobby",
+      name: "source",
+      label: "source",
       required: true,
-      options: [{ key: "f", label: "Fishing" }, { key: "c", label: "Cooking" }]
+      options: [{ key: "f", label: "Online" }, { key: "c", label: "Web" }]
     }
   ];
   constructor() {}
