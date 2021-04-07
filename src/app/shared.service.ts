@@ -26,7 +26,7 @@ export class SharedService {
       required: true
     },
     {
-      type: "textarea",
+      type: "text",
       name: "address",
       label: "Address",
       value: "",
