@@ -1,4 +1,4 @@
-<div class="col-sm-12">
+<!-- <div class="col-sm-12">
   <div class="card">
     <div class="card-header">{{getHeader()}}</div>
     <div class="card-body">
@@ -12,4 +12,14 @@
     <label>JSON</label>
     <textarea formControlName="fields" class="form-control" rows="3"></textarea>
   </div>
-</div>
+</div> -->
+
+<nav>
+  <ul>
+    <li><a [routerLink]="['/create', 1]" routerLinkActive="active">USA</a></li>
+    <li>
+      <a [routerLink]="['/create', 2]" routerLinkActive="active">India</a>
+    </li>
+  </ul>
+</nav>
+<router-outlet></router-outlet>
