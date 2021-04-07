@@ -35,9 +35,9 @@ export class SharedService {
     },
     {
       type: "radio",
-      name: "country",
-      label: "Country",
-      value: "in",
+      name: "gender",
+      label: "Gender",
+      value: "m",
       required: true,
       options: [{ key: "m", label: "Male" }, { key: "f", label: "Female" }]
     },
@@ -62,7 +62,7 @@ export class SharedService {
     {
       type: "text",
       name: "lastName",
-      label: "Last Name",
+      label: "Sur Name",
       value: "",
       required: true
     },
