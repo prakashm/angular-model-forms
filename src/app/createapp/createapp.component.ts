@@ -21,23 +21,21 @@ export class CreateappComponent implements OnInit, OnDestroy {
     private sharedService: SharedService
   ) {
     this.routeSub = this.route.params.subscribe(params => {
-      //console.log(params); //log the entire params object
-      //console.log(params["id"]); //log the value of id
       this.cntryTyp = Number(params["id"]);
-    });
-    console.log(this.cntryTyp);
+      console.log(this.cntryTyp);
 
-    this.fields = sharedService.getControls(this.cntryTyp);
+      this.fields = sharedService.getControls(this.cntryTyp);
 
-    console.log(this.fields);
+      console.log(this.fields);
 
-    this.form = new FormGroup({
-      fields: new FormControl(JSON.stringify(this.fields))
-    });
+      this.form = new FormGroup({
+        fields: new FormControl(JSON.stringify(this.fields))
+      });
 
-    this.unsubcribe = this.form.valueChanges.subscribe(update => {
-      console.log(update);
-      this.fields = JSON.parse(update.fields);
+      this.unsubcribe = this.form.valueChanges.subscribe(update => {
+        console.log(update);
+        this.fields = JSON.parse(update.fields);
+      });
     });
   }
 
@@ -46,7 +44,7 @@ export class CreateappComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    //this.unsubcribe();
+    this.routeSub.unsubscribe();
     console.log("Un Subscribe");
   }
 

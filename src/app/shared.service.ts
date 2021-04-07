@@ -197,6 +197,24 @@ export class SharedService {
   constructor() {}
 
   getControls(countryCode): any {
-    return this.india_controls;
+    console.log("Country code request : " + countryCode);
+    switch (Number(countryCode)) {
+      case 1: {
+        return this.usa_controls;
+        break;
+      }
+      case 2: {
+        return this.india_controls;
+        break;
+      }
+      case 3: {
+        return this.mexico_controls;
+        break;
+      }
+      case 4: {
+        return this.tunisia_controls;
+        break;
+      }
+    }
   }
 }
