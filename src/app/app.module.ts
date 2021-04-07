@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { AppComponent } from "./app.component";
 import { HelloComponent } from "./hello.component";
 import { DynamicFormBuilderModule } from "./dynamic-form/dynamic-form-builder.module";
+import { SharedService } from "./shared.service";
 
 @NgModule({
   imports: [
@@ -14,6 +15,7 @@ import { DynamicFormBuilderModule } from "./dynamic-form/dynamic-form-builder.mo
     DynamicFormBuilderModule
   ],
   declarations: [AppComponent, HelloComponent],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: [SharedService]
 })
 export class AppModule {}

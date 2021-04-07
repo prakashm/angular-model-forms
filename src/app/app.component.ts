@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { FormGroup, FormControl } from "@angular/forms";
+import { SharedService } from "./shared.service";
 
 @Component({
   selector: "my-app",
@@ -10,62 +11,10 @@ export class AppComponent {
   public form: FormGroup;
   unsubcribe: any;
 
-  public fields: any[] = [
-    {
-      type: "text",
-      name: "firstName",
-      label: "First Name",
-      value: "",
-      required: true
-    },
-    {
-      type: "text",
-      name: "lastName",
-      label: "Last Name",
-      value: "",
-      required: true
-    },
-    {
-      type: "text",
-      name: "email",
-      label: "Email",
-      value: "",
-      required: true
-    },
+  public fields: any[];
 
-    {
-      type: "file",
-      name: "picture",
-      label: "Picture",
-      required: true,
-      onUpload: this.onUpload.bind(this)
-    },
-    {
-      type: "dropdown",
-      name: "country",
-      label: "Country",
-      value: "in",
-      required: true,
-      options: [{ key: "in", label: "India" }, { key: "us", label: "USA" }]
-    },
-    {
-      type: "radio",
-      name: "country",
-      label: "Country",
-      value: "in",
-      required: true,
-      options: [{ key: "m", label: "Male" }, { key: "f", label: "Female" }]
-    },
-    {
-      type: "checkbox",
-      name: "hobby",
-      label: "Hobby",
-      required: true,
-      options: [{ key: "f", label: "Fishing" }, { key: "c", label: "Cooking" }]
-    }
-  ];
-
-  constructor() {
+  constructor(private sharedService: SharedService) {
+    this.fields = sharedService.getControls("usa");
     this.form = new FormGroup({
       fields: new FormControl(JSON.stringify(this.fields))
     });
@@ -83,7 +32,11 @@ export class AppComponent {
     return this.fields;
   }
 
-  ngDistroy() {
+  getHeader() {
+    return this.fields.filter(a => a.type === "header")[0].value;
+  }
+
+  ngDestroy() {
     this.unsubcribe();
   }
 }
