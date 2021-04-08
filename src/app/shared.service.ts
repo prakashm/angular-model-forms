@@ -59,7 +59,7 @@ export class SharedService {
     {
       type: "checkbox",
       name: "source",
-      label: "source",
+      label: "Source",
       required: true,
       options: [{ key: "f", label: "Online" }, { key: "c", label: "Web" }]
     },
@@ -109,8 +109,8 @@ export class SharedService {
     },
     {
       type: "radio",
-      name: "country",
-      label: "Country",
+      name: "gender",
+      label: "Gender",
       value: "in",
       required: true,
       options: [{ key: "m", label: "Male" }, { key: "f", label: "Female" }]
@@ -118,7 +118,7 @@ export class SharedService {
     {
       type: "checkbox",
       name: "source",
-      label: "source",
+      label: "Source",
       required: true,
       options: [{ key: "f", label: "Online" }, { key: "c", label: "Web" }]
     }
@@ -163,8 +163,8 @@ export class SharedService {
     },
     {
       type: "radio",
-      name: "country",
-      label: "Country",
+      name: "gender",
+      label: "Gender",
       value: "in",
       required: true,
       options: [{ key: "m", label: "Male" }, { key: "f", label: "Female" }]
@@ -216,8 +216,8 @@ export class SharedService {
     },
     {
       type: "radio",
-      name: "country",
-      label: "Country",
+      name: "gender",
+      label: "Gender",
       value: "in",
       required: true,
       options: [{ key: "m", label: "Male" }, { key: "f", label: "Female" }]
@@ -225,7 +225,7 @@ export class SharedService {
     {
       type: "checkbox",
       name: "source",
-      label: "source",
+      label: "Source",
       required: true,
       options: [{ key: "f", label: "Online" }, { key: "c", label: "Web" }]
     }
