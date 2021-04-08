@@ -71,7 +71,6 @@ export class SharedService {
       options: [{ key: "f", label: "cash" }, { key: "c", label: "ATM" }]
     }
   ];
-
   india_controls: any[] = [
     { type: "header", value: "India Forms" },
     {
