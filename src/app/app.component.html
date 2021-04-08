@@ -1,16 +1,24 @@
-
-<nav>
-  <ul>
-    <li><a [routerLink]="['/create', 1]" routerLinkActive="active">USA</a></li>
-    <li>
-      <a [routerLink]="['/create', 2]" routerLinkActive="active">India</a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    <li class="nav-item">
+      <a class="nav-link active" [routerLink]="['/']" routerLinkActive="active">Home</a>
     </li>
     <li>
-      <a [routerLink]="['/create', 3]" routerLinkActive="active">Mexico</a>
+      <hr class="dropdown-divider">
     </li>
-    <li>
-      <a [routerLink]="['/create', 4]" routerLinkActive="active">Tunisia</a>
+    <li class="nav-item">
+      <a class="nav-link active" [routerLink]="['/create', 1]" routerLinkActive="active">USA</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" [routerLink]="['/create', 2]" routerLinkActive="active">India</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" [routerLink]="['/create', 3]" routerLinkActive="active">Mexico</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" [routerLink]="['/create', 4]" routerLinkActive="active">Tunisia</a>
     </li>
   </ul>
 </nav>
+<hr>
 <router-outlet></router-outlet>
