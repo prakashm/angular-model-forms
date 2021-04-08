@@ -3,7 +3,10 @@ import { Injectable } from "@angular/core";
 @Injectable()
 export class SharedService {
   usa_controls: any[] = [
-    { type: "header", value: "USA Forms" },
+    {
+      type: "header",
+      value: "USA Forms"
+    },
     {
       type: "text",
       name: "firstName",
@@ -81,7 +84,7 @@ export class SharedService {
     {
       type: "text",
       name: "lastName",
-      label: "Sur Name",
+      label: "Surname",
       value: "",
       required: true
     },

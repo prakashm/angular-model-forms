@@ -23,6 +23,7 @@ import { FormGroup, FormControl, Validators } from "@angular/forms";
           >
             Save
           </button>
+          &nbsp; | &nbsp;
           <button class="btn btn-danger" type="reset">
             Reset
           </button>
