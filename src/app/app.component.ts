@@ -37,6 +37,6 @@ export class AppComponent {
   }
 
   ngDestroy() {
-    this.unsubcribe();
+    //this.unsubcribe();
   }
 }

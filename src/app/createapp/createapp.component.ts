@@ -46,7 +46,7 @@ export class CreateappComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.routeSub.unsubscribe();
     console.log("Un Subscribe");
-    this.unsubcribe();
+    //this.unsubcribe();
   }
 
   getFields() {
